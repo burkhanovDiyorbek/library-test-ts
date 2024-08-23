@@ -58,12 +58,22 @@ const Modal: FC<ModalProps> = ({ book, setShowModal, setBooksData }) => {
         <button onClick={() => setShowModal(false)}>❌</button>
         <div className="modal-content">
           <h2>{book?.title}</h2>
-          <div>
+          <div className="flex items-center justify-between">
             <p>$ {book?.price} *</p>
-            <div>
-              <button onClick={() => setCount((prev) => prev - 1)}>-</button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setCount((prev) => prev - 1)}
+                className="btn-warning"
+              >
+                -
+              </button>
               <p>{count}</p>
-              <button onClick={() => setCount((prev) => prev + 1)}>+</button>
+              <button
+                onClick={() => setCount((prev) => prev + 1)}
+                className="btn"
+              >
+                +
+              </button>
             </div>
             <p>
               Total Price : <span>$ {book?.price * count}</span>
@@ -71,7 +81,7 @@ const Modal: FC<ModalProps> = ({ book, setShowModal, setBooksData }) => {
             <button
               onClick={() => buyBtnClickFunc(book?.id)}
               disabled={count < 1}
-              className="buy-btn"
+              className="btn"
             >
               BUY
             </button>
