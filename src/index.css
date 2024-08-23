@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700;
+}
+
+.btn-warning {
+  @apply bg-red-700 text-white font-bold py-2 px-4 rounded hover:bg-blue-700;
+}
+
+.title {
+  @apply mx-auto text-3xl font-bold mb-10;
+}
+
+.modal-container {
+  @apply top-0 left-0 fixed w-[100vw] h-[100vh] flex justify-center items-center bg-[#a8a4a46b] overflow-y-auto;
+}
+
+.modal {
+  @apply bg-[#fff] px-10 py-5 w-[600px] relative rounded-lg h-[100%] overflow-y-auto max-h-[80vh];
+}
+
+.modal-content {
+  @apply flex flex-col gap-5 mt-20;
+}
+
+.orders {
+  @apply flex-col;
+}
+
+.column {
+  @apply grid justify-center w-[100%] px-2 py-5 items-center;
+  border: 1px solid #e0e0e0;
+  grid-template-columns: repeat(6, 1fr);
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+  }
+}
+
+input {
+  border: 1px solid #e0e0e0;
+  padding: 5px 12px;
+}
+
+.notification {
+  position: relative;
+  cursor: pointer;
+  span {
+    display: inline-block;
+    padding: 5px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    background: red;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 800;
+  }
+}
