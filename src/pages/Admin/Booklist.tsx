@@ -47,7 +47,7 @@ const BookList = () => {
       ) : (
         ""
       )}
-      <div className="container rounded-3xl px-10 py-7 mb-30 shadow-[0 10px 10px 10px #8f8b8b21]  justify-between">
+      <div className="container rounded-3xl px-10 py-7 mb-30 shadow-[0 10px 10px 10px #8f8b8b21]  justify-between gap-5">
         <p>{booksData?.length} books found</p>
         <button onClick={() => setShowAddBookModal(true)} className="btn">
           + NEW BOOK
